@@ -326,8 +326,8 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
 	 $scope.googleLogin = function () {
 		
       $cordovaOauth.google("961941792261-65dbtr9khlc6auv8u9n78icmjtvbpj9h.apps.googleusercontent.com", ["https://www.googleapis.com/auth/urlshortener", "https://www.googleapis.com/auth/userinfo.email"]).then(function (result) {
-        // $scope.oauthResult = result;
-				alert(JSON.stringify( result ,null,4))
+        $scope.oauthResult = result;
+		//alert(JSON.stringify( result ,null,4))
       }, function (error) {
         $scope.oauthResult = "OAUTH ERROR (see console)";
         console.log(error);
