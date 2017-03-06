@@ -422,7 +422,7 @@ App.controller('landCtrl', function($scope,$rootScope,$q, $ionicLoading, $compil
 					alertPopup = $ionicPopup.alert({
 						title: '<p class="text-center color-yellow">Booking Success</p>',
 						template: '<p class="text-center color-gery">'+$scope.trip_distance+' KM</p>'+
-											'<p class="text-center color-gery">Estimated Fare ₹ '+$scope.trip_rate+'</p>'
+											'<p class="text-center color-gery">Estimated Fare ₹ '+$scope.trip_rate+' + ₹1.5/min</p>'
 					});
 					animateMyPop();
 				}else{
