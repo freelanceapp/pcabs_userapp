@@ -370,6 +370,11 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
 	$scope.getRandomSpan = function(){
   		return Math.floor((Math.random()*6)+1);
 	}
+
+	$scope.sendfeedback = function()
+	{
+		alert("Thanks for your feedback we will get back to you shortly");
+	}
 	
 });
 
