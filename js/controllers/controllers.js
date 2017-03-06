@@ -254,7 +254,10 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
 	
 	}
 	
-  
+  	$scope.randomkm = function()
+  	{
+  		return Math.floor(Math.random() * 20);
+  	}
 	
 	
 	
