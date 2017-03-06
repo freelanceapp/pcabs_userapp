@@ -296,6 +296,10 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
 		 });
 		
 	}
+
+	$scope.promotion = function(){
+		alert("Today's Promocode is PC007 get upto 10% discount");
+	}
 	
 	 $scope.facebookLogin = function () {
       $cordovaOauth.facebook("415834555280405", ["email"]).then(function (result) {
