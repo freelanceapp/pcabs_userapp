@@ -252,13 +252,7 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
 		}, 1000);
 		//$state.go('landing');
 	
-	}
-	
-  	$scope.randomkm = function()
-  	{
-  		return Math.floor(Math.random() * 20);
-  	}
-	
+	}	
 	
 	
 	$scope.load_trips = function(){
