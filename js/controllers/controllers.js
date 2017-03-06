@@ -373,7 +373,7 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
 
 	$scope.sendfeedback = function()
 	{
-		alert("Thanks for your feedback we will get back to you shortly");
+		alert("Thanks for your request we will get back to you shortly");
 	}
 	
 });
