@@ -252,15 +252,7 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
 		}, 1000);
 		//$state.go('landing');
 	
-<<<<<<< HEAD
 	}	
-=======
-	}
-	
-  
-	
->>>>>>> parent of 40971b9... added random km
-	
 	
 	$scope.load_trips = function(){
 		
