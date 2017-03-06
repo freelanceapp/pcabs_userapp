@@ -79,7 +79,7 @@
 					
             <div class="row no-padding text-center ">
                 <div class="col col-25" ng-class="{active_cab : active_cab == $index }" ng-click='clicked_item($index)' ng-repeat="cab in cabs">
-                    <div class="col color-yellow">{{cab.cartype | limitTo:7 }}<span ng-show='cab.cartype.length > 7' >..</span><span id="tim"></span></div>
+                    <div class="col color-yellow">{{cab.cartype | limitTo:7 }}<span ng-show='cab.cartype.length > 7' >..</span></div>
                     <img ng-src='img/{{cab.cartype}}.png' err-SRC="img/Sedan.png" style='width: 50px' />
                     <!-- <div class="col color-gery">{{day.number}}</div> -->
                     
@@ -104,11 +104,3 @@
 	</ion-footer-bar>
 
 </ion-view>
-
-<script type="text/javascript">
-	function randomkm()
-	{
-		var randtime = Math.floor(Math.random() * 20);
-		$('#tim').innerhtml() = randtime."mins";
-	}
-</script>
