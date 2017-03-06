@@ -401,14 +401,14 @@ App.controller('landCtrl', function($scope,$rootScope,$q, $ionicLoading, $compil
 			var link = 'book_cab';
 			var post_data = {  
 							'user_name'    : $rootScope.user_data.User_name,
-							'token'   		 : $rootScope.user_data.token,
+							'token'   		: $rootScope.user_data.token,
 							'transfertype' : "Point to Point Transfer" ,
 							'book_date'    : $scope.book_date ,
-							'pickup_area'  : $scope.start_box.location,
-							'drop_area'    : $scope.end_box.location,
-							'taxi_type'    : $scope.selected_cab.cartype,
-							'km'					 : $scope.trip_distance,
-							'amount'			 : $scope.trip_rate	
+							'pickup_area'	: $scope.start_box.location,
+							'drop_area' : $scope.end_box.location,
+							'taxi_type'	: $scope.selected_cab.cartype,
+							'km'			: $scope.trip_distance,
+							'amount'	: $scope.trip_rate	
 						 }
 	
 			WebService.show_loading();	
