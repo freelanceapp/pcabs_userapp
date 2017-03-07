@@ -5,6 +5,7 @@ App.factory("landInit", function ($rootScope) {
         mapStyles: function () {
 			
             var style = [
+            /*
 					{
 						"featureType": "all",
 						"elementType": "labels.text.fill",
@@ -170,6 +171,7 @@ App.factory("landInit", function ($rootScope) {
 							}
 						]
 					}
+					*/
 				];
 			return style;
 		}
