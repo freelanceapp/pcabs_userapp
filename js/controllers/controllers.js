@@ -335,41 +335,53 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
     };
 		
 		
-		$scope.social_login = function(user_name){
-			//alert(user_name);
-					
-					 var link = 'social_login';
-					 var post_data = {  
-										'Email'      : user_name ,
-										'secret_key' : secret_key
-									 }
-					
-					 // WebService.show_loading();	
+	$scope.social_login = function(user_name){
+		//alert(user_name);
+				
+				 var link = 'social_login';
+				 var post_data = {  
+									'Email'      : user_name ,
+									'secret_key' : secret_key
+								 }
+				
+				 // WebService.show_loading();	
+				 
+				 var promise = WebService.send_data( link,post_data);
+				 
+				 promise.then(function(data){  
 					 
-					 var promise = WebService.send_data( link,post_data);
+					 $ionicLoading.hide();
 					 
-					 promise.then(function(data){  
-						 
-						 $ionicLoading.hide();
-						 
-						 if(data.status == 'success'){
-								//alert(JSON.stringify(data));
-							
-							var user_data = { 
-																"User_name" : user_name,
-																"token"			:	data.token
-															};
-											
-							localStorage.setItem('user_data',JSON.stringify(user_data));
-							
-							$rootScope.user_data = JSON.parse( localStorage.getItem('user_data') );
-							
-							$state.go('app.landing', {}, {reload: true}); 
-							
-						 }
-						 
-					 })
-		}
+					 if(data.status == 'success'){
+							//alert(JSON.stringify(data));
+						
+						var user_data = { 
+															"User_name" : user_name,
+															"token"			:	data.token
+														};
+										
+						localStorage.setItem('user_data',JSON.stringify(user_data));
+						
+						$rootScope.user_data = JSON.parse( localStorage.getItem('user_data') );
+						
+						$state.go('app.landing', {}, {reload: true}); 
+						
+					 }
+					 
+				 })
+	};
+
+	$scope.randomno = function()
+	{
+		return Math.floor(Math.random() * 20) + 1;
+	};
+
+	$scope.promotion = function()
+	{
+		alert("Today's Promo code PCAB007 has been applied. Get upto 15% offer");
+	};
+
+	
 	
 });
 

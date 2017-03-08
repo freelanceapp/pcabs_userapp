@@ -112,8 +112,8 @@ angular.module('CallApp', ['ionic','ngCordova','CallAppcontrollers'])
 .config(function($stateProvider, $urlRouterProvider , $cordovaInAppBrowserProvider) {
 		
 		setTimeout(function() {
-				
-         navigator.splashscreen.hide();
+		alert("Enable your location and click ok")
+        navigator.splashscreen.hide();
     }, 3000);
 		
 	 var browserOptions = {
