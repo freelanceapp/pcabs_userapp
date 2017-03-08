@@ -5,6 +5,14 @@ App.factory("landInit", function ($rootScope) {
         mapStyles: function () {
 			
             var style = [
+
+            	'controls': {
+            	'compass': false,
+            	'myLocationButton': true,
+            	'indoorPicker': true,
+            	'zoom': true
+          	}
+
             /*
 					{
 						"featureType": "all",
