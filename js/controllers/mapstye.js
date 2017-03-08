@@ -2,7 +2,6 @@ function initialize() {
 
   // Create an array of styles.
   var styles = [
-  /*
     {
       stylers: [
         { hue: "#4d4b4b" },
@@ -24,7 +23,6 @@ function initialize() {
         { visibility: "off" }
       ]
     }
-    */
   ];
 
   // Create a new StyledMapType object, passing it the array of styles,

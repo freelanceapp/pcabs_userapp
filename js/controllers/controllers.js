@@ -252,7 +252,11 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
 		}, 1000);
 		//$state.go('landing');
 	
-	}	
+	}
+	
+  
+	
+	
 	
 	$scope.load_trips = function(){
 		
@@ -296,10 +300,6 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
 		 });
 		
 	}
-
-	$scope.promotion = function(){
-		alert("Today's Promocode is PC007 get upto 10% discount");
-	}
 	
 	 $scope.facebookLogin = function () {
       $cordovaOauth.facebook("415834555280405", ["email"]).then(function (result) {
@@ -326,8 +326,8 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
 	 $scope.googleLogin = function () {
 		
       $cordovaOauth.google("961941792261-65dbtr9khlc6auv8u9n78icmjtvbpj9h.apps.googleusercontent.com", ["https://www.googleapis.com/auth/urlshortener", "https://www.googleapis.com/auth/userinfo.email"]).then(function (result) {
-        $scope.oauthResult = result;
-		//alert(JSON.stringify( result ,null,4))
+        // $scope.oauthResult = result;
+				alert(JSON.stringify( result ,null,4))
       }, function (error) {
         $scope.oauthResult = "OAUTH ERROR (see console)";
         console.log(error);
@@ -335,55 +335,41 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
     };
 		
 		
-	$scope.social_login = function(user_name){
-		//alert(user_name);
-				
-				 var link = 'social_login';
-				 var post_data = {  
-									'Email'      : user_name ,
-									'secret_key' : secret_key
-								 }
-				
-				 // WebService.show_loading();	
-				 
-				 var promise = WebService.send_data( link,post_data);
-				 
-				 promise.then(function(data){  
+		$scope.social_login = function(user_name){
+			//alert(user_name);
+					
+					 var link = 'social_login';
+					 var post_data = {  
+										'Email'      : user_name ,
+										'secret_key' : secret_key
+									 }
+					
+					 // WebService.show_loading();	
 					 
-					 $ionicLoading.hide();
+					 var promise = WebService.send_data( link,post_data);
 					 
-					 if(data.status == 'success'){
-							//alert(JSON.stringify(data));
-						
-						var user_data = { 
-															"User_name" : user_name,
-															"token"			:	data.token
-														};
-										
-						localStorage.setItem('user_data',JSON.stringify(user_data));
-						
-						$rootScope.user_data = JSON.parse( localStorage.getItem('user_data') );
-						
-						$state.go('app.landing', {}, {reload: true}); 
-						
-					 }
-					 
-				 })
-	}
-
-	$scope.getRandomSpan = function(){
-  		return Math.floor((Math.random()*6)+1);
-	}
-
-	$scope.sendfeedback = function()
-	{
-		alert("Thanks for your request we will get back to you shortly");
-	}
-
-	$scope.cancel_ride = function()
-	{
-		prompt('Enter your reason for cancellation');
-	}
+					 promise.then(function(data){  
+						 
+						 $ionicLoading.hide();
+						 
+						 if(data.status == 'success'){
+								//alert(JSON.stringify(data));
+							
+							var user_data = { 
+																"User_name" : user_name,
+																"token"			:	data.token
+															};
+											
+							localStorage.setItem('user_data',JSON.stringify(user_data));
+							
+							$rootScope.user_data = JSON.parse( localStorage.getItem('user_data') );
+							
+							$state.go('app.landing', {}, {reload: true}); 
+							
+						 }
+						 
+					 })
+		}
 	
 });
 
