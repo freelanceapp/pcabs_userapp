@@ -22,6 +22,7 @@ App.controller('landCtrl', function($scope,$rootScope,$q, $ionicLoading, $compil
 			  
 			  disableDefaultUI: true,
 			  mapTypeId: google.maps.MapTypeId.ROADMAP
+			  mMap.setMyLocationEnabled(true);
 			};
 			
 			var map = new google.maps.Map(document.getElementById("map"),
