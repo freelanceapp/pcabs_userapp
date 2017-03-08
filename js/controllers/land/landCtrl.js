@@ -14,13 +14,13 @@ App.controller('landCtrl', function($scope,$rootScope,$q, $ionicLoading, $compil
 			var styledMap = new google.maps.StyledMapType(styles,
 			{name: "Styled Map"});
 	
-			var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
+			var myLatlng = new google.maps.LatLng(43.07493,85.1376);
         
 			var mapOptions = {
 			  center: myLatlng,
 			  zoom: 16,
 			  
-			  disableDefaultUI: false,
+			  disableDefaultUI: true,
 			  mapTypeId: google.maps.MapTypeId.ROADMAP
 			};
 			
