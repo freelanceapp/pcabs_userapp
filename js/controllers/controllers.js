@@ -379,6 +379,11 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
 	{
 		alert("Thanks for your request we will get back to you shortly");
 	}
+
+	$scope.cancel_ride = function()
+	{
+		alert('Your ride has been successfully cancelled');
+	}
 	
 });
 
