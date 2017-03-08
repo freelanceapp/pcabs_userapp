@@ -112,8 +112,8 @@ angular.module('CallApp', ['ionic','ngCordova','CallAppcontrollers'])
 .config(function($stateProvider, $urlRouterProvider , $cordovaInAppBrowserProvider) {
 		
 		setTimeout(function() {
-		alert("Remember to turn location service ON");	
-        navigator.splashscreen.hide();
+				
+         navigator.splashscreen.hide();
     }, 3000);
 		
 	 var browserOptions = {
