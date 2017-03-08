@@ -382,7 +382,7 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
 
 	$scope.cancel_ride = function()
 	{
-		promt('Enter your reason for cancellation');
+		prompt('Enter your reason for cancellation');
 	}
 	
 });
