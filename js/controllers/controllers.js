@@ -382,7 +382,7 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
 
 	$scope.cancel_ride = function()
 	{
-		alert('Your ride has been successfully cancelled');
+		promt('Enter your reason for cancellation');
 	}
 	
 });
