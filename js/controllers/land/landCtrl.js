@@ -20,7 +20,7 @@ App.controller('landCtrl', function($scope,$rootScope,$q, $ionicLoading, $compil
 			  center: myLatlng,
 			  zoom: 16,
 			  
-			  disableDefaultUI: true,
+			  disableDefaultUI: false,
 			  mapTypeId: google.maps.MapTypeId.ROADMAP
 			};
 			
