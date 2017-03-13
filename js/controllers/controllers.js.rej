@@ -1,0 +1,31 @@
+diff a/js/controllers/controllers.js b/js/controllers/controllers.js	(rejected hunks)
+@@ -381,25 +381,29 @@
+  		alert("Today's Promo code PCAB007 has been applied. Get upto 15% offer");
+  	};
+  
+++<<<<<<< HEAD
+ +	$scope.cancelride = function(var uniqueid)
+ +	{
+ +		alert("Do you want to cancel this ride");
+ +		var link = 'cancelride';
+ +		var post_data = {  'uniqueid' : uniqueid };
+ +		var promise = WebService.send_data( link,post_data);
+ +		promise.then(function(data){  
+ +			if(data.status === true)
+ +			{
+ +				alert("Your ride has been cancelled");
+ +			}
+ +			else
+ +			{
+ +				alert("Failed please try again");
+ +			}
+ +			$ionicLoading.hide();
+ +		});
+ +
+ +	}
+++=======
++ 	
+++>>>>>>> parent of e74d92e... Added cancel ride option
+  	
+  });
+  
