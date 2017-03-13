@@ -381,25 +381,6 @@ App.controller('AppCtrl', function($scope,$rootScope,$cordovaNetwork, $ionicModa
 		alert("Today's Promo code PCAB007 has been applied. Get upto 15% offer");
 	};
 
-	$scope.cancelride = function(unique_id)
-	{
-		alert("Are you sure you wanna cancel this ride");
-		var link = 'cancel_ride';
-    	var post_data =unique_id;
-    	var promise = WebService.send_data(link, post_data);
-    	promise.then(function (data) {
-        	if(data.status === true)
-        	{
-        		alert("Booking cancelled successfully");
-        	}
-        	else
-        	{
-        		alert("Failed please try again");
-        	}
-    	});
-
-	};
-
 	
 	
 });
