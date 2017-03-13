@@ -1,9 +1,0 @@
-diff a/js/controllers/land/landInit.js b/js/controllers/land/landInit.js	(rejected hunks)
-@@ -171,6 +171,7 @@
- 							}
- 						]
- 					}
-+					*/
- 				];
- 			return style;
- 		}
