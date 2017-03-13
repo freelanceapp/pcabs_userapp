@@ -420,9 +420,9 @@ App.controller('landCtrl', function($scope,$rootScope,$q, $ionicLoading, $compil
 				$ionicLoading.hide();
 				if( data.status = 'success'){
 					alertPopup = $ionicPopup.alert({
-						title: '<p class="text-center color-yellow">'+$filter('langTranslate')("BOOKING SUCCESS",$rootScope.appConvertedLang['SUCCESS'])+'</p>',
+						title: '<p class="text-center color-yellow">'+$filter('langTranslate')("SUCCESS",$rootScope.appConvertedLang['SUCCESS'])+'</p>',
 						template: '<p class="text-center color-gery">'+$scope.trip_distance+' KM</p>'+
-											'<p class="text-center color-gery">Estimated fare ₹ '+$scope.trip_rate+' + ₹1.5/Min</p>'
+											'<p class="text-center color-gery"> ₹ '+$scope.trip_rate+' + ₹1.5/Min</p>'
 					});
 					animateMyPop();
 				}else{
